@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="GameProject" customModuleProvider="target">
+            <connections>
+                <outlet property="guideBtn" destination="dwL-FT-zVi" id="XfB-RD-IQL"/>
+                <outlet property="iconImage" destination="PTZ-VR-Ybz" id="F6v-du-tJo"/>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="A8R-E8-rVo"/>
+                <outlet property="muteBtn" destination="rJD-gg-oxA" id="Jeb-3f-7Y7"/>
+                <outlet property="playBtn" destination="JLv-hi-6pw" id="B8c-Q5-GYA"/>
+                <outlet property="topPoint" destination="qnq-dK-nSG" id="ZM6-j8-8ny"/>
+                <outlet property="unMuteBtn" destination="AwS-EG-8iO" id="uLh-J4-UBY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" userLabel="MainView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="VA8-yn-zoi">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTZ-VR-Ybz" userLabel="Image_icon">
+                    <rect key="frame" x="107" y="144" width="200" height="200"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Site-logo" translatesAutoresizingMaskIntoConstraints="NO" id="y0l-VF-E5L">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="100"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="1iI-7r-Kgk"/>
+                        <constraint firstAttribute="bottom" secondItem="y0l-VF-E5L" secondAttribute="bottom" id="8gI-jf-fVf"/>
+                        <constraint firstItem="y0l-VF-E5L" firstAttribute="leading" secondItem="PTZ-VR-Ybz" secondAttribute="leading" id="EdC-Ea-Zno"/>
+                        <constraint firstItem="y0l-VF-E5L" firstAttribute="top" secondItem="PTZ-VR-Ybz" secondAttribute="top" id="ElT-7l-ikE"/>
+                        <constraint firstAttribute="trailing" secondItem="y0l-VF-E5L" secondAttribute="trailing" id="OOc-SG-5yZ"/>
+                        <constraint firstAttribute="height" constant="200" id="msp-st-TJV"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLv-hi-6pw">
+                    <rect key="frame" x="22" y="480.5" width="370" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="sUE-q2-Lsj"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="2">
+                            <color key="backgroundColor" red="0.10206721321804274" green="0.23823056605427481" blue="0.49285196520618557" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="strokeColor" systemColor="systemGray6Color"/>
+                        </backgroundConfiguration>
+                        <attributedString key="attributedTitle">
+                            <fragment content="BẮT ĐẦU">
+                                <attributes>
+                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onTapPlay:" destination="-1" eventType="touchUpInside" id="Ikx-g3-G1g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnq-dK-nSG">
+                    <rect key="frame" x="22" y="547.5" width="370" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="edJ-kd-Wfb"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="2">
+                            <color key="backgroundColor" red="0.10206721320000001" green="0.23823056610000001" blue="0.49285196520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="strokeColor" systemColor="systemGray6Color"/>
+                        </backgroundConfiguration>
+                        <attributedString key="attributedTitle">
+                            <fragment content="ĐIỂM CAO">
+                                <attributes>
+                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwL-FT-zVi">
+                    <rect key="frame" x="22" y="614.5" width="370" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="hnZ-hX-ow2"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                        <backgroundConfiguration key="background" strokeWidth="2">
+                            <color key="backgroundColor" red="0.10206721320000001" green="0.23823056610000001" blue="0.49285196520000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="strokeColor" systemColor="systemGray6Color"/>
+                        </backgroundConfiguration>
+                        <attributedString key="attributedTitle">
+                            <fragment content="HƯỚNG DẪN">
+                                <attributes>
+                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwS-EG-8iO" userLabel="UnMuteButton">
+                    <rect key="frame" x="352" y="800" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="XxW-aT-x9N"/>
+                        <constraint firstAttribute="height" constant="40" id="pnR-nO-VMy"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="volume.3.fill" catalog="system" cornerStyle="large">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </backgroundConfiguration>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onTapUnMuteBtn:" destination="-1" eventType="touchUpInside" id="0AI-TZ-AE5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJD-gg-oxA" userLabel="MuteButton">
+                    <rect key="frame" x="352" y="800" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="H8X-DD-MKg"/>
+                        <constraint firstAttribute="width" constant="40" id="azZ-Fk-hbh"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="volume.slash.fill" catalog="system" cornerStyle="large">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </backgroundConfiguration>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onTapMuteBtn:" destination="-1" eventType="touchUpInside" id="RMa-P8-Fpl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qnq-dK-nSG" secondAttribute="trailing" constant="22" id="14d-bZ-r5a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AwS-EG-8iO" secondAttribute="trailing" constant="22" id="3UR-8h-FxO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dwL-FT-zVi" secondAttribute="trailing" constant="22" id="87b-Lz-QRS"/>
+                <constraint firstItem="PTZ-VR-Ybz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="F2i-67-zL5"/>
+                <constraint firstItem="qnq-dK-nSG" firstAttribute="top" secondItem="JLv-hi-6pw" secondAttribute="bottom" constant="22" id="HZU-GU-JKb"/>
+                <constraint firstItem="qnq-dK-nSG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="Q4n-gx-vgo"/>
+                <constraint firstItem="VA8-yn-zoi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bmK-wx-Fei"/>
+                <constraint firstItem="PTZ-VR-Ybz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dCl-IW-Kzz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AwS-EG-8iO" secondAttribute="bottom" constant="22" id="dTr-Ip-yAT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VA8-yn-zoi" secondAttribute="trailing" id="dtk-F0-ERb"/>
+                <constraint firstAttribute="bottom" secondItem="VA8-yn-zoi" secondAttribute="bottom" id="hAZ-Xp-wCI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JLv-hi-6pw" secondAttribute="trailing" constant="22" id="kgc-dd-7sP"/>
+                <constraint firstItem="dwL-FT-zVi" firstAttribute="top" secondItem="qnq-dK-nSG" secondAttribute="bottom" constant="22" id="q7w-mV-3Rh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rJD-gg-oxA" secondAttribute="bottom" constant="22" id="r81-gb-RP3"/>
+                <constraint firstItem="JLv-hi-6pw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="sfl-s0-TXd"/>
+                <constraint firstItem="dwL-FT-zVi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="sgu-yH-IYJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rJD-gg-oxA" secondAttribute="trailing" constant="22" id="t5n-QY-JX5"/>
+                <constraint firstItem="VA8-yn-zoi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xB4-Ky-WMG"/>
+                <constraint firstItem="JLv-hi-6pw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="55" id="zdM-EP-zPv"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="130"/>
+        </view>
+        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="4Tm-y3-uEV">
+            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="-136.23188405797103" y="482.8125"/>
+        </activityIndicatorView>
+    </objects>
+    <resources>
+        <image name="Site-logo" width="500" height="471"/>
+        <image name="bg" width="1920" height="1080"/>
+        <image name="volume.3.fill" catalog="system" width="128" height="86"/>
+        <image name="volume.slash.fill" catalog="system" width="124" height="128"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

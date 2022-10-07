@@ -1,0 +1,28 @@
+//
+//  JsonSupport.swift
+//  GameProject
+//
+//  Created by GST.DN on 03/10/2022.
+//
+
+import Foundation
+
+let data = """
+[
+    {
+    "icon": "50_50",
+    "name": "Sự trợ giúp 50:50",
+    "description": "Máy sẽ loại ra 2 đáp án sai giúp bạn."
+},
+    {
+    "icon": "ATA_2",
+    "name": "Hỏi khán giả trường quay",
+    "description": "Sẽ cho phép bạn hỏi khán giả trong trường quay."
+},
+    {
+    "icon": "call_icon",
+    "name": "Gọi điện người thân",
+    "description": "Sẽ cho phép bạn gọi người thân trong 30s."
+},
+]
+"""
