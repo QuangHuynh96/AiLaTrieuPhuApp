@@ -15,8 +15,10 @@ class TimeOutViewController: UIViewController {
     @IBOutlet var buttonRight: UIButton?
     @IBOutlet weak var mainView: UIView?
     @IBOutlet weak var inputNameView: UIView?
+    @IBOutlet weak var saveButton: UIButton?
     @IBOutlet weak var inputNameTextField: UITextField?
 
+    var shareManager = FBshareManager.shared
     var titleString: String?
     var message: String?
     var scores: Double?
@@ -26,6 +28,7 @@ class TimeOutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveButton?.isEnabled = false
         inputNameView?.alpha = 0
         inputNameView?.isHidden = true
         mainView?.alpha = 0
@@ -48,13 +51,25 @@ class TimeOutViewController: UIViewController {
               let scores = scores else {
             return
         }
-        _ = History.insertNewContact(name: name, scores: scores)
-        actionDidSave()
+        if name != "" {
+            _ = History.insertNewContact(name: name, scores: scores)
+            actionDidSave()
+        }
     }
 
     private func setupUI() {
         titleLabel?.text = titleString
         messageLabel?.text = message
+    }
+    @IBAction func changeValueNameTextField(_ sender: Any) {
+        guard let name = inputNameTextField?.text else {
+            return
+        }
+        if name != "" {
+            saveButton?.isEnabled = true
+        } else {
+            saveButton?.isEnabled = false
+        }
     }
 
     @IBAction func playButton(_ sender: Any) {
@@ -69,4 +84,7 @@ class TimeOutViewController: UIViewController {
         actionTapHomeBtn()
     }
 
+    @IBAction func onTapShareFb(_ sender: Any) {
+        shareManager.sharedFB(uiViewController: self, imageName: "shareimage")
+    }
 }

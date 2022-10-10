@@ -50,10 +50,14 @@ extension ScoreViewController: UITableViewDelegate, UITableViewDataSource {
         UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
             self.scoreTable?.alpha = 1
         }, completion: nil)
+        let largeNumber = Int(historis[indexPath.row].scores)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let formattedNumber = numberFormatter.string(from: NSNumber(value: largeNumber))
 
         cell.placesLabel.text = "\(indexPath.row + 1)"
         cell.nameLabel.text = historis[indexPath.row].name
-        cell.scoreLabel.text = String(historis[indexPath.row].scores)
+        cell.scoreLabel.text = formattedNumber
         return cell
     }
 

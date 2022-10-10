@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RulesViewController" customModule="GameProject" customModuleProvider="target">
             <connections>
                 <outlet property="rulesTable" destination="icG-ez-H5D" id="cro-sX-cwO"/>
+                <outlet property="textViewField" destination="7Ty-Td-VSo" id="j8P-vt-Oue"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

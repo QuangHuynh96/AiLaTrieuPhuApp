@@ -27,12 +27,12 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WcF-et-ag1" userLabel="MainView">
-                    <rect key="frame" x="20" y="146" width="347" height="220"/>
+                    <rect key="frame" x="21.666666666666657" y="146" width="347" height="220"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vz-Bv-DNV" userLabel="SpView">
                             <rect key="frame" x="2" y="2" width="343" height="216"/>
@@ -57,7 +57,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cps-UV-vWo" userLabel="CLabel">
-                                            <rect key="frame" x="100" y="1.6666666666666572" width="45" height="17"/>
+                                            <rect key="frame" x="99.999999999999986" y="1.6666666666666572" width="45.000000000000014" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="45" id="qPW-oc-jlZ"/>
                                             </constraints>
@@ -272,7 +272,6 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="220" id="Ax8-74-uQj"/>
                         <constraint firstItem="1vz-Bv-DNV" firstAttribute="top" secondItem="WcF-et-ag1" secondAttribute="top" constant="2" id="Fq5-Eo-FcF"/>
-                        <constraint firstAttribute="width" constant="347" id="Uve-w3-CSs"/>
                         <constraint firstAttribute="trailing" secondItem="1vz-Bv-DNV" secondAttribute="trailing" constant="2" id="VLz-lw-0Df"/>
                         <constraint firstItem="1vz-Bv-DNV" firstAttribute="leading" secondItem="WcF-et-ag1" secondAttribute="leading" constant="2" id="hxF-F6-EFt"/>
                         <constraint firstAttribute="bottom" secondItem="1vz-Bv-DNV" secondAttribute="bottom" constant="2" id="yOL-pE-mf5"/>
@@ -287,8 +286,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="WcF-et-ag1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="B41-WW-Mwv"/>
-                <constraint firstItem="WcF-et-ag1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SN5-4z-yZM"/>
+                <constraint firstItem="WcF-et-ag1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FvS-cq-fCy"/>
                 <constraint firstItem="WcF-et-ag1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="146" id="ZWn-9U-9XF"/>
             </constraints>
             <point key="canvasLocation" x="130.76923076923077" y="75.355450236966817"/>

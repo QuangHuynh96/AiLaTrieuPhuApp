@@ -24,31 +24,34 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quyền trợ giúp 50:50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4G-AJ-wxi">
-                        <rect key="frame" x="81" y="9" width="259" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <rect key="frame" x="88" y="0.0" width="250" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="OJx-ZM-2Co"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50:50, máy sẽ loại ra 2 đáp án sai giúp bạn." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c6-zU-9NQ">
-                        <rect key="frame" x="81" y="31" width="279" height="23"/>
+                        <rect key="frame" x="88" y="30" width="272" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="23" id="vOM-T5-eMv"/>
+                            <constraint firstAttribute="height" constant="30" id="vOM-T5-eMv"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="6c6-zU-9NQ" firstAttribute="top" secondItem="V4G-AJ-wxi" secondAttribute="bottom" constant="4" id="Fmc-3S-8Mu"/>
+                    <constraint firstItem="V4G-AJ-wxi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7mS-0q-31z"/>
                     <constraint firstAttribute="trailing" secondItem="6c6-zU-9NQ" secondAttribute="trailing" id="Pte-vZ-8n1"/>
                     <constraint firstItem="NwC-kE-Wdw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Qoh-s1-8ZA"/>
                     <constraint firstItem="NwC-kE-Wdw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="XTK-vE-Ucg"/>
                     <constraint firstItem="NwC-kE-Wdw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Xcw-xp-F2U"/>
-                    <constraint firstItem="V4G-AJ-wxi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="dwK-99-Gvm"/>
-                    <constraint firstItem="6c6-zU-9NQ" firstAttribute="leading" secondItem="NwC-kE-Wdw" secondAttribute="trailing" constant="15" id="k1H-cU-7Ix"/>
-                    <constraint firstAttribute="trailing" secondItem="V4G-AJ-wxi" secondAttribute="trailing" constant="20" id="tkn-Tw-elF"/>
-                    <constraint firstItem="V4G-AJ-wxi" firstAttribute="leading" secondItem="NwC-kE-Wdw" secondAttribute="trailing" constant="15" id="yoI-Bk-ADe"/>
+                    <constraint firstAttribute="bottom" secondItem="6c6-zU-9NQ" secondAttribute="bottom" id="gkZ-Q1-Av6"/>
+                    <constraint firstItem="6c6-zU-9NQ" firstAttribute="leading" secondItem="NwC-kE-Wdw" secondAttribute="trailing" constant="22" id="k1H-cU-7Ix"/>
+                    <constraint firstAttribute="trailing" secondItem="V4G-AJ-wxi" secondAttribute="trailing" constant="22" id="tkn-Tw-elF"/>
+                    <constraint firstItem="V4G-AJ-wxi" firstAttribute="leading" secondItem="NwC-kE-Wdw" secondAttribute="trailing" constant="22" id="yoI-Bk-ADe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

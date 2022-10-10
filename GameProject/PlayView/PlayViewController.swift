@@ -27,7 +27,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var bView: UIView?
     @IBOutlet weak var cView: UIView?
     @IBOutlet weak var dView: UIView?
-// view suport
+// view support
     @IBOutlet weak var imageSpView1: UIImageView?
     @IBOutlet weak var imageSpView2: UIImageView?
     @IBOutlet weak var imageSpView3: UIImageView?
@@ -38,7 +38,7 @@ class PlayViewController: UIViewController {
     weak var timer: Timer?
     var playerBackground: AVAudioPlayer?
     var playerAction: AVAudioPlayer?
-    var playerActionUseSp: AVAudioPlayer?
+    var playerActionUseSupport: AVAudioPlayer?
     var colorAnswerBtn: CGColor?
     var sceneHeight: CGFloat = 0
     var sceneWidth: CGFloat = 0
@@ -46,13 +46,18 @@ class PlayViewController: UIViewController {
     var checkSelected: Bool = false
     var timeCount = 0
     var answerCount = 1
-    var scores = 0
+    var scores: Int = 0
     var correctAnswer = ""
     var finalAnswer = ""
     var aAnswerValue = ""
     var bAnswerValue = ""
     var cAnswerValue = ""
     var dAnswerValue = ""
+    let rewards: [Int] = [
+        200, 400, 600, 1000, 2000,
+        3000, 6000, 10000, 14000, 22000,
+        30000, 40000, 60000, 85000, 150000
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -192,7 +197,22 @@ extension PlayViewController {
             playSoundBackground()
             passDataToView()
         } else if answerCount == 16 {
-// stop game
+            stopTimer()
+            playerBackground?.stop()
+            playSoundBackground()
+            let congratVc = CongratulationViewController()
+                    congratVc.modalPresentationStyle = .overCurrentContext
+                    congratVc.modalTransitionStyle = .crossDissolve
+                    congratVc.providesPresentationContextTransitionStyle = true
+                    congratVc.definesPresentationContext = true
+            congratVc.actionOnTapBack = { [weak self] in
+                self?.dismiss(animated: false)
+                self?.navigationController?.popViewController(animated: true)
+            }
+            congratVc.actionShareFb = {
+                FBshareManager.shared.sharedFB(uiViewController: congratVc, imageName: "shareimage")
+            }
+                    self.present(congratVc, animated: true)
         } else {
             passDataToView()
         }
@@ -203,11 +223,16 @@ extension PlayViewController {
         finalAnswer = ""
         resetTimCount(second: 31)
         view.backgroundColor = UIColor(cgColor: self.colorAnswerBtn ?? CGColor(gray: 0, alpha: 0))
-        pointView?.titleLabel?.text = String(scores)
+
+//        let numberFormatter = NumberFormatter()
+//        numberFormatter.numberStyle = .decimal
+//        pointView?.titleLabel?.text = numberFormatter.string(from: NSNumber(value: scores))
     }
 
     func passDataToView() {
-        pointView?.setTitle("\(scores)", for: .normal)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        pointView?.titleLabel?.text = numberFormatter.string(from: NSNumber(value: scores))
         titleQuestionView?.text = "Câu \(answerCount)"
         DataManager.shared.getDataRamdom { [weak self] allAnswer in
             guard let self = self else {
@@ -265,16 +290,19 @@ extension PlayViewController {
             }, completion: { _ in
                 UIView.animate(withDuration: 0.1, delay: 0.2, options: .curveLinear, animations: {
                     view.backgroundColor = .green
-                }, completion: {[self] _ in
-                    if correctAnswer == finalAnswer {
-                        playSoundCorrectAnswer()
-                        answerCount += 1
-                        scores = 1000 + (scores*2)
-                        resetSelectAnswer(view: view)
-                        checkNextLevel()
+                }, completion: { [weak self] _ in
+                    guard let self = self else {
+                        return
+                    }
+                    if self.correctAnswer == self.finalAnswer {
+                        self.playSoundCorrectAnswer()
+                        self.answerCount += 1
+                        self.scores = self.rewards[self.answerCount - 2]
+                        self.resetSelectAnswer(view: view)
+                        self.checkNextLevel()
                     } else {
-                        playSoundFailAnswer()
-                        stopTimer()
+                        self.playSoundFailAnswer()
+                        self.stopTimer()
                         UIView.animate(withDuration: 0, delay: 2, options: .curveLinear, animations: {
                             self.showAlert()
                         }, completion: nil)
@@ -406,7 +434,7 @@ extension PlayViewController {
         }
         customAlert.actionClosureRight = { [weak self] in
             self?.dismiss(animated: true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self?.removeTwoAnswer()
                 self?.setTimer()
                 self?.imageSpView1?.isHidden = false
@@ -437,7 +465,7 @@ extension PlayViewController {
             let audienceVc = AskAudienceViewController()
             audienceVc.configuraPercent(percent: percent)
             audienceVc.actionPlaySound = { [weak self] in
-                self?.playSoundUseSp()
+                self?.playSoundUseSupport()
             }
             audienceVc.actionDidCancel = { [weak self] in
                 self?.setTimer()
@@ -474,7 +502,7 @@ extension PlayViewController {
             let callVc = CallFriendViewController()
             callVc.tempAnswer = percent
             callVc.actionPlaySound = { [weak self] in
-                self?.playSoundUseSp()
+                self?.playSoundUseSupport()
             }
             callVc.actionDidCancel = { [weak self] in
                 self?.setTimer()
@@ -501,9 +529,8 @@ extension PlayViewController {
         case dAnswerValue:
             return "D"
         default:
-            break
+            return ""
         }
-       return ""
     }
 
     private func removeTwoAnswer() {
@@ -513,7 +540,7 @@ extension PlayViewController {
             answers.remove(at: index)
             break
         }
-        playSoundUseSp()
+        playSoundUseSupport()
         for _ in 0...1 {
             let number = Int.random(in: 0...answers.count-1)
             switch answers[number] {
@@ -610,8 +637,8 @@ extension PlayViewController {
         }
     }
 
-    func playSoundUseSp() {
-        playerActionUseSp?.stop()
+    func playSoundUseSupport() {
+        playerActionUseSupport?.stop()
         let urlString = Bundle.main.path(forResource: "5050", ofType: "wav")
         do {
             try AVAudioSession.sharedInstance().setMode(.default)
@@ -619,8 +646,8 @@ extension PlayViewController {
             guard let urlString = urlString else {
                 return
             }
-            playerActionUseSp = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-            guard let player = playerActionUseSp else {
+            playerActionUseSupport = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+            guard let player = playerActionUseSupport else {
                 return
             }
             player.play()

@@ -40,6 +40,20 @@
 		01AA929928E5319500589202 /* GameProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01AA929728E5319500589202 /* GameProject.xcdatamodeld */; };
 		01AA929B28E5319700589202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AA929A28E5319700589202 /* Assets.xcassets */; };
 		01AA929E28E5319700589202 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01AA929C28E5319700589202 /* LaunchScreen.storyboard */; };
+		01AC4CB028F07BA900B65B8D /* RulesTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC4CAE28F07BA800B65B8D /* RulesTableViewCell2.swift */; };
+		01AC4CB128F07BA900B65B8D /* RulesTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AC4CAF28F07BA900B65B8D /* RulesTableViewCell2.xib */; };
+		01AC4CB428F07E8E00B65B8D /* RulesTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC4CB228F07E8E00B65B8D /* RulesTableViewCell3.swift */; };
+		01AC4CB528F07E8E00B65B8D /* RulesTableViewCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01AC4CB328F07E8E00B65B8D /* RulesTableViewCell3.xib */; };
+		01B5491828F3B78C00F021DD /* ShareFBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5491728F3B78C00F021DD /* ShareFBManager.swift */; };
+		01B5492428F3B96600F021DD /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 01B5492328F3B96600F021DD /* FacebookCore */; };
+		01B5492628F3B96600F021DD /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 01B5492528F3B96600F021DD /* FacebookShare */; };
+		01B5492928F3BB1C00F021DD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 01B5492828F3BB1C00F021DD /* FirebaseDatabase */; };
+		01B5492B28F3BB1C00F021DD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 01B5492A28F3BB1C00F021DD /* FirebaseFirestore */; };
+		01B5492D28F3BB1C00F021DD /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 01B5492C28F3BB1C00F021DD /* FirebaseFirestoreCombine-Community */; };
+		01B5492F28F3BB1C00F021DD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 01B5492E28F3BB1C00F021DD /* FirebaseFirestoreSwift */; };
+		01B5493128F3BB1C00F021DD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 01B5493028F3BB1C00F021DD /* FirebaseStorage */; };
+		01B5493B28F3F89800F021DD /* CongratulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B5493928F3F89800F021DD /* CongratulationViewController.xib */; };
+		01B5493C28F3F89800F021DD /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5493A28F3F89800F021DD /* CongratulationViewController.swift */; };
 		01DBF5E928EFCC9300670B70 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DBF5E728EFCC9300670B70 /* HomeViewController.swift */; };
 		01DBF5EA28EFCC9300670B70 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DBF5E828EFCC9300670B70 /* HomeViewController.xib */; };
 		01DBF5F428EFE9FB00670B70 /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DBF5EE28EFE9FB00670B70 /* PlayViewController.xib */; };
@@ -50,12 +64,6 @@
 		01DBF60328EFF23400670B70 /* TimeOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DBF5FF28EFF23400670B70 /* TimeOutViewController.xib */; };
 		01DBF60628EFF2A400670B70 /* CallFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DBF60428EFF2A400670B70 /* CallFriendViewController.swift */; };
 		01DBF60728EFF2A400670B70 /* CallFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DBF60528EFF2A400670B70 /* CallFriendViewController.xib */; };
-		CFAD987428EA7F0200F71494 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CFAD987328EA7F0200F71494 /* FirebaseAuth */; };
-		CFAD987628EA7F0200F71494 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CFAD987528EA7F0200F71494 /* FirebaseDatabase */; };
-		CFAD987828EA7F0200F71494 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFAD987728EA7F0200F71494 /* FirebaseDatabaseSwift */; };
-		CFAD987A28EA7F0200F71494 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CFAD987928EA7F0200F71494 /* FirebaseFirestore */; };
-		CFAD987C28EA7F0200F71494 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFAD987B28EA7F0200F71494 /* FirebaseFirestoreSwift */; };
-		CFAD987E28EA7F0200F71494 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CFAD987D28EA7F0200F71494 /* FirebaseStorage */; };
 		CFAD988028EA807200F71494 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFAD987F28EA807200F71494 /* GoogleService-Info.plist */; };
 		CFAD988328EA8BCE00F71494 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD988228EA8BCE00F71494 /* Result.swift */; };
 /* End PBXBuildFile section */
@@ -96,6 +104,13 @@
 		01AA929A28E5319700589202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01AA929D28E5319700589202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01AA929F28E5319700589202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01AC4CAE28F07BA800B65B8D /* RulesTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewCell2.swift; sourceTree = "<group>"; };
+		01AC4CAF28F07BA900B65B8D /* RulesTableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesTableViewCell2.xib; sourceTree = "<group>"; };
+		01AC4CB228F07E8E00B65B8D /* RulesTableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewCell3.swift; sourceTree = "<group>"; };
+		01AC4CB328F07E8E00B65B8D /* RulesTableViewCell3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesTableViewCell3.xib; sourceTree = "<group>"; };
+		01B5491728F3B78C00F021DD /* ShareFBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFBManager.swift; sourceTree = "<group>"; };
+		01B5493928F3F89800F021DD /* CongratulationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongratulationViewController.xib; sourceTree = "<group>"; };
+		01B5493A28F3F89800F021DD /* CongratulationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
 		01DBF5E728EFCC9300670B70 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../GameProject 09.45.20/GameProject/HomeView/HomeViewController.swift"; sourceTree = "<group>"; };
 		01DBF5E828EFCC9300670B70 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = "../../../GameProject 09.45.20/GameProject/HomeView/HomeViewController.xib"; sourceTree = "<group>"; };
 		01DBF5EE28EFE9FB00670B70 /* PlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
@@ -115,12 +130,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFAD987C28EA7F0200F71494 /* FirebaseFirestoreSwift in Frameworks */,
-				CFAD987828EA7F0200F71494 /* FirebaseDatabaseSwift in Frameworks */,
-				CFAD987A28EA7F0200F71494 /* FirebaseFirestore in Frameworks */,
-				CFAD987628EA7F0200F71494 /* FirebaseDatabase in Frameworks */,
-				CFAD987428EA7F0200F71494 /* FirebaseAuth in Frameworks */,
-				CFAD987E28EA7F0200F71494 /* FirebaseStorage in Frameworks */,
+				01B5492928F3BB1C00F021DD /* FirebaseDatabase in Frameworks */,
+				01B5492B28F3BB1C00F021DD /* FirebaseFirestore in Frameworks */,
+				01B5492628F3B96600F021DD /* FacebookShare in Frameworks */,
+				01B5492D28F3BB1C00F021DD /* FirebaseFirestoreCombine-Community in Frameworks */,
+				01B5493128F3BB1C00F021DD /* FirebaseStorage in Frameworks */,
+				01B5492428F3B96600F021DD /* FacebookCore in Frameworks */,
+				01B5492F28F3BB1C00F021DD /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,12 +186,16 @@
 		0192632B28ED9C7B00271121 /* RulesView */ = {
 			isa = PBXGroup;
 			children = (
-				0192632F28ED9C8D00271121 /* JsonSupport.json */,
-				0192633028ED9C8D00271121 /* RulesTableViewCell.swift */,
-				0192632E28ED9C8D00271121 /* RulesTableViewCell.xib */,
 				0192633128ED9C8D00271121 /* RulesViewController.swift */,
 				0192632D28ED9C8D00271121 /* RulesViewController.xib */,
+				0192632F28ED9C8D00271121 /* JsonSupport.json */,
 				0192632C28ED9C8D00271121 /* SupportDetail.swift */,
+				0192633028ED9C8D00271121 /* RulesTableViewCell.swift */,
+				0192632E28ED9C8D00271121 /* RulesTableViewCell.xib */,
+				01AC4CAE28F07BA800B65B8D /* RulesTableViewCell2.swift */,
+				01AC4CAF28F07BA900B65B8D /* RulesTableViewCell2.xib */,
+				01AC4CB228F07E8E00B65B8D /* RulesTableViewCell3.swift */,
+				01AC4CB328F07E8E00B65B8D /* RulesTableViewCell3.xib */,
 			);
 			path = RulesView;
 			sourceTree = "<group>";
@@ -201,6 +221,8 @@
 		01AA928D28E5319500589202 /* GameProject */ = {
 			isa = PBXGroup;
 			children = (
+				01B5493428F3F84800F021DD /* WinerView */,
+				01B5491628F3B77500F021DD /* FBshareManager */,
 				01DBF5F928EFEA9C00670B70 /* PlayView */,
 				01721A3528EDC425005DD2FF /* AlertCustomView */,
 				0192632B28ED9C7B00271121 /* RulesView */,
@@ -227,6 +249,23 @@
 				01DBF5E828EFCC9300670B70 /* HomeViewController.xib */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		01B5491628F3B77500F021DD /* FBshareManager */ = {
+			isa = PBXGroup;
+			children = (
+				01B5491728F3B78C00F021DD /* ShareFBManager.swift */,
+			);
+			path = FBshareManager;
+			sourceTree = "<group>";
+		};
+		01B5493428F3F84800F021DD /* WinerView */ = {
+			isa = PBXGroup;
+			children = (
+				01B5493A28F3F89800F021DD /* CongratulationViewController.swift */,
+				01B5493928F3F89800F021DD /* CongratulationViewController.xib */,
+			);
+			path = WinerView;
 			sourceTree = "<group>";
 		};
 		01DBF5F928EFEA9C00670B70 /* PlayView */ = {
@@ -278,12 +317,13 @@
 			);
 			name = GameProject;
 			packageProductDependencies = (
-				CFAD987328EA7F0200F71494 /* FirebaseAuth */,
-				CFAD987528EA7F0200F71494 /* FirebaseDatabase */,
-				CFAD987728EA7F0200F71494 /* FirebaseDatabaseSwift */,
-				CFAD987928EA7F0200F71494 /* FirebaseFirestore */,
-				CFAD987B28EA7F0200F71494 /* FirebaseFirestoreSwift */,
-				CFAD987D28EA7F0200F71494 /* FirebaseStorage */,
+				01B5492328F3B96600F021DD /* FacebookCore */,
+				01B5492528F3B96600F021DD /* FacebookShare */,
+				01B5492828F3BB1C00F021DD /* FirebaseDatabase */,
+				01B5492A28F3BB1C00F021DD /* FirebaseFirestore */,
+				01B5492C28F3BB1C00F021DD /* FirebaseFirestoreCombine-Community */,
+				01B5492E28F3BB1C00F021DD /* FirebaseFirestoreSwift */,
+				01B5493028F3BB1C00F021DD /* FirebaseStorage */,
 			);
 			productName = GameProject;
 			productReference = 01AA928B28E5319500589202 /* GameProject.app */;
@@ -314,7 +354,8 @@
 			);
 			mainGroup = 01AA928228E5319500589202;
 			packageReferences = (
-				CFAD987228EA7F0200F71494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				01B5492228F3B96600F021DD /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				01B5492728F3BB1C00F021DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 01AA928C28E5319500589202 /* Products */;
 			projectDirPath = "";
@@ -343,17 +384,20 @@
 				0167EA3C28EE89A500B1A491 /* good_step1.wav in Resources */,
 				01DBF60028EFF23400670B70 /* AskAudienceViewController.xib in Resources */,
 				0167EA3628EE787A00B1A491 /* last_game.wav in Resources */,
+				01B5493B28F3F89800F021DD /* CongratulationViewController.xib in Resources */,
 				0192632628ED9C6100271121 /* ScoreTableViewCell.xib in Resources */,
 				0192633328ED9C8D00271121 /* RulesViewController.xib in Resources */,
 				0167EA3A28EE790E00B1A491 /* next_level.wav in Resources */,
 				01DBF5EA28EFCC9300670B70 /* HomeViewController.xib in Resources */,
 				0167EA3E28EE89B800B1A491 /* good_step2.wav in Resources */,
 				01DBF60728EFF2A400670B70 /* CallFriendViewController.xib in Resources */,
+				01AC4CB128F07BA900B65B8D /* RulesTableViewCell2.xib in Resources */,
 				0192632828ED9C6100271121 /* ScoreViewController.xib in Resources */,
 				0192630D28ED245F00271121 /* media10.wav in Resources */,
 				0192633528ED9C8D00271121 /* JsonSupport.json in Resources */,
 				01721A3828EDC441005DD2FF /* CustomAlertViewController.xib in Resources */,
 				0192630F28ED245F00271121 /* fail.wav in Resources */,
+				01AC4CB528F07E8E00B65B8D /* RulesTableViewCell3.xib in Resources */,
 				0192631028ED245F00271121 /* media5.mp3 in Resources */,
 				0192630C28ED245F00271121 /* media9.wav in Resources */,
 			);
@@ -389,16 +433,20 @@
 				0192633628ED9C8D00271121 /* RulesTableViewCell.swift in Sources */,
 				01721A3928EDC441005DD2FF /* CustomAlertViewController.swift in Sources */,
 				0192631328ED26A600271121 /* DataManager.swift in Sources */,
+				01B5491828F3B78C00F021DD /* ShareFBManager.swift in Sources */,
 				0167EA4A28EE8D3800B1A491 /* History+CoreDataProperties.swift in Sources */,
 				0192633228ED9C8D00271121 /* SupportDetail.swift in Sources */,
+				01B5493C28F3F89800F021DD /* CongratulationViewController.swift in Sources */,
 				01DBF60228EFF23400670B70 /* TimeOutViewController.swift in Sources */,
 				0192632A28ED9C6100271121 /* ScoreTableViewCell.swift in Sources */,
 				0192633728ED9C8D00271121 /* RulesViewController.swift in Sources */,
+				01AC4CB028F07BA900B65B8D /* RulesTableViewCell2.swift in Sources */,
 				01AA929928E5319500589202 /* GameProject.xcdatamodeld in Sources */,
 				01DBF5F728EFE9FB00670B70 /* PlayViewController.swift in Sources */,
 				01AA928F28E5319500589202 /* AppDelegate.swift in Sources */,
 				0167EA4928EE8D3800B1A491 /* History+CoreDataClass.swift in Sources */,
 				0192632928ED9C6100271121 /* Score.swift in Sources */,
+				01AC4CB428F07E8E00B65B8D /* RulesTableViewCell3.swift in Sources */,
 				01DBF5E928EFCC9300670B70 /* HomeViewController.swift in Sources */,
 				CFAD988328EA8BCE00F71494 /* Result.swift in Sources */,
 				01AA929128E5319500589202 /* SceneDelegate.swift in Sources */,
@@ -546,11 +594,15 @@
 				DEVELOPMENT_TEAM = 5XAK8J5JQU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GameProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ai Là Triệu Phú";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,11 +626,15 @@
 				DEVELOPMENT_TEAM = 5XAK8J5JQU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GameProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ai Là Triệu Phú";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -616,45 +672,58 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CFAD987228EA7F0200F71494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		01B5492228F3B96600F021DD /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		01B5492728F3BB1C00F021DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CFAD987328EA7F0200F71494 /* FirebaseAuth */ = {
+		01B5492328F3B96600F021DD /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFAD987228EA7F0200F71494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
+			package = 01B5492228F3B96600F021DD /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
 		};
-		CFAD987528EA7F0200F71494 /* FirebaseDatabase */ = {
+		01B5492528F3B96600F021DD /* FacebookShare */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFAD987228EA7F0200F71494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 01B5492228F3B96600F021DD /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		01B5492828F3BB1C00F021DD /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01B5492728F3BB1C00F021DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
-		CFAD987728EA7F0200F71494 /* FirebaseDatabaseSwift */ = {
+		01B5492A28F3BB1C00F021DD /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFAD987228EA7F0200F71494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabaseSwift;
-		};
-		CFAD987928EA7F0200F71494 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CFAD987228EA7F0200F71494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 01B5492728F3BB1C00F021DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		CFAD987B28EA7F0200F71494 /* FirebaseFirestoreSwift */ = {
+		01B5492C28F3BB1C00F021DD /* FirebaseFirestoreCombine-Community */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFAD987228EA7F0200F71494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 01B5492728F3BB1C00F021DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		01B5492E28F3BB1C00F021DD /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01B5492728F3BB1C00F021DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
-		CFAD987D28EA7F0200F71494 /* FirebaseStorage */ = {
+		01B5493028F3BB1C00F021DD /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFAD987228EA7F0200F71494 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 01B5492728F3BB1C00F021DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
