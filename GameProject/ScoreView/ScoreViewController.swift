@@ -47,6 +47,7 @@ extension ScoreViewController: UITableViewDelegate, UITableViewDataSource {
             for: indexPath) as? ScoreTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
             self.scoreTable?.alpha = 1
         }, completion: nil)

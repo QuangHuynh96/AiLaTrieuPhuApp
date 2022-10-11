@@ -51,6 +51,7 @@ extension RulesViewController: UITableViewDelegate, UITableViewDataSource {
                 for: indexPath) as? RulesTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(
@@ -58,6 +59,7 @@ extension RulesViewController: UITableViewDelegate, UITableViewDataSource {
                 for: indexPath) as? RulesTableViewCell2 else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(
@@ -65,15 +67,12 @@ extension RulesViewController: UITableViewDelegate, UITableViewDataSource {
                 for: indexPath) as? RulesTableViewCell3 else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         60
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        rulesTable?.deselectRow(at: indexPath, animated: true)
     }
 }

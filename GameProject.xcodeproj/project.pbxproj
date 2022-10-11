@@ -54,6 +54,7 @@
 		01B5493128F3BB1C00F021DD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 01B5493028F3BB1C00F021DD /* FirebaseStorage */; };
 		01B5493B28F3F89800F021DD /* CongratulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B5493928F3F89800F021DD /* CongratulationViewController.xib */; };
 		01B5493C28F3F89800F021DD /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5493A28F3F89800F021DD /* CongratulationViewController.swift */; };
+		01B5493E28F50D7C00F021DD /* PlayViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5493D28F50D7C00F021DD /* PlayViewExtension.swift */; };
 		01DBF5E928EFCC9300670B70 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DBF5E728EFCC9300670B70 /* HomeViewController.swift */; };
 		01DBF5EA28EFCC9300670B70 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DBF5E828EFCC9300670B70 /* HomeViewController.xib */; };
 		01DBF5F428EFE9FB00670B70 /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DBF5EE28EFE9FB00670B70 /* PlayViewController.xib */; };
@@ -111,6 +112,7 @@
 		01B5491728F3B78C00F021DD /* ShareFBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFBManager.swift; sourceTree = "<group>"; };
 		01B5493928F3F89800F021DD /* CongratulationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongratulationViewController.xib; sourceTree = "<group>"; };
 		01B5493A28F3F89800F021DD /* CongratulationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
+		01B5493D28F50D7C00F021DD /* PlayViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewExtension.swift; sourceTree = "<group>"; };
 		01DBF5E728EFCC9300670B70 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../GameProject 09.45.20/GameProject/HomeView/HomeViewController.swift"; sourceTree = "<group>"; };
 		01DBF5E828EFCC9300670B70 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = "../../../GameProject 09.45.20/GameProject/HomeView/HomeViewController.xib"; sourceTree = "<group>"; };
 		01DBF5EE28EFE9FB00670B70 /* PlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				01DBF5FC28EFF23400670B70 /* AskAudienceViewController.xib */,
 				01DBF5FE28EFF23400670B70 /* TimeOutViewController.swift */,
 				01DBF5FF28EFF23400670B70 /* TimeOutViewController.xib */,
+				01B5493D28F50D7C00F021DD /* PlayViewExtension.swift */,
 			);
 			path = PlayView;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B5493E28F50D7C00F021DD /* PlayViewExtension.swift in Sources */,
 				0192633628ED9C8D00271121 /* RulesTableViewCell.swift in Sources */,
 				01721A3928EDC441005DD2FF /* CustomAlertViewController.swift in Sources */,
 				0192631328ED26A600271121 /* DataManager.swift in Sources */,

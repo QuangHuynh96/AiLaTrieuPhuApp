@@ -21,7 +21,7 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="gqK-Mv-BiL">
                     <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                    <color key="backgroundColor" red="0.075921474320000001" green="0.28334996039999999" blue="0.55995957169999999" alpha="0.84845344389999999" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.21960783" green="0.38823530080000002" blue="0.62745100259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BẢNG ĐIỂM TRIỆU PHÚ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM1-W9-ZMv">
                     <rect key="frame" x="20" y="84" width="350" height="37"/>

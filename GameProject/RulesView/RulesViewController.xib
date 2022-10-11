@@ -24,15 +24,15 @@
                     <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                     <color key="backgroundColor" red="0.075921474320000001" green="0.28334996039999999" blue="0.55995957169999999" alpha="0.84845344389999999" colorSpace="custom" customColorSpace="displayP3"/>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ty-Td-VSo">
-                    <rect key="frame" x="15" y="94" width="360" height="170"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ty-Td-VSo">
+                    <rect key="frame" x="15" y="94" width="360" height="150"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="170" id="vlr-wo-bpH"/>
+                        <constraint firstAttribute="height" constant="150" id="vlr-wo-bpH"/>
                     </constraints>
                     <string key="text">Tham gia trò chơi này để làm giàu cho chính bạn bằng cách trả lời đúng các câu hỏi và di chuyến đến các mốc tiền nhất định và mốc tiền cuối cùng đó chính là 150 triệu đồng. Mỗi câu hỏi bạn sẽ có 30s để trả lời.</string>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -45,7 +45,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="3rX-HX-K0u"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="26"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -63,7 +63,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="icG-ez-H5D">
-                    <rect key="frame" x="10" y="342" width="370" height="468"/>
+                    <rect key="frame" x="10" y="317" width="370" height="493"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -71,13 +71,12 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trong khi bạn trả lời, bạn sẽ có 3 quyền trợ giúp như sau:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wca-13-uQN">
-                    <rect key="frame" x="16" y="269" width="358" height="63"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trong khi bạn trả lời, bạn sẽ có 3 quyền trợ giúp như sau:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wca-13-uQN">
+                    <rect key="frame" x="15" y="244" width="360" height="63"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="63" id="4IU-NA-VpE"/>
-                        <constraint firstAttribute="width" constant="358" id="R8q-Dw-Gq2"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -86,18 +85,19 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="V4f-0t-o4e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1ph-lL-9bT"/>
+                <constraint firstAttribute="trailing" secondItem="wca-13-uQN" secondAttribute="trailing" constant="15" id="695-Xc-En6"/>
                 <constraint firstItem="7Ty-Td-VSo" firstAttribute="top" secondItem="blk-me-OIn" secondAttribute="bottom" constant="10" id="6Y0-Lp-zwJ"/>
                 <constraint firstItem="blk-me-OIn" firstAttribute="leading" secondItem="vqb-u5-QN7" secondAttribute="trailing" id="9NS-5f-9EQ"/>
-                <constraint firstItem="wca-13-uQN" firstAttribute="top" secondItem="7Ty-Td-VSo" secondAttribute="bottom" constant="5" id="9d0-fF-iDb"/>
+                <constraint firstItem="wca-13-uQN" firstAttribute="top" secondItem="7Ty-Td-VSo" secondAttribute="bottom" id="9d0-fF-iDb"/>
                 <constraint firstAttribute="trailing" secondItem="V4f-0t-o4e" secondAttribute="trailing" id="Gq3-9y-7zM"/>
                 <constraint firstItem="vqb-u5-QN7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="K38-zY-kNv"/>
-                <constraint firstItem="7Ty-Td-VSo" firstAttribute="top" secondItem="vqb-u5-QN7" secondAttribute="bottom" constant="10" id="Kiz-Sc-QLG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="icG-ez-H5D" secondAttribute="trailing" constant="10" id="LGc-BI-4YG"/>
                 <constraint firstItem="icG-ez-H5D" firstAttribute="top" secondItem="wca-13-uQN" secondAttribute="bottom" constant="10" id="NxF-3m-Iq0"/>
                 <constraint firstItem="wca-13-uQN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OgE-PK-kB8"/>
                 <constraint firstItem="7Ty-Td-VSo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="QqY-wM-ZNP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Ty-Td-VSo" secondAttribute="trailing" constant="15" id="RmL-kf-mbn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="icG-ez-H5D" secondAttribute="bottom" id="TkJ-d0-6fY"/>
+                <constraint firstItem="wca-13-uQN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="WVN-Ht-C7x"/>
                 <constraint firstItem="vqb-u5-QN7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jE4-AU-qcG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="blk-me-OIn" secondAttribute="trailing" constant="70" id="nzc-8W-r1p"/>
                 <constraint firstItem="icG-ez-H5D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="pdB-pR-McQ"/>
