@@ -55,6 +55,8 @@
 		01B5493B28F3F89800F021DD /* CongratulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B5493928F3F89800F021DD /* CongratulationViewController.xib */; };
 		01B5493C28F3F89800F021DD /* CongratulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5493A28F3F89800F021DD /* CongratulationViewController.swift */; };
 		01B5493E28F50D7C00F021DD /* PlayViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5493D28F50D7C00F021DD /* PlayViewExtension.swift */; };
+		01B5494328F6712F00F021DD /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5494128F6712F00F021DD /* DescriptionTableViewCell.swift */; };
+		01B5494428F6712F00F021DD /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B5494228F6712F00F021DD /* DescriptionTableViewCell.xib */; };
 		01DBF5E928EFCC9300670B70 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DBF5E728EFCC9300670B70 /* HomeViewController.swift */; };
 		01DBF5EA28EFCC9300670B70 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DBF5E828EFCC9300670B70 /* HomeViewController.xib */; };
 		01DBF5F428EFE9FB00670B70 /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DBF5EE28EFE9FB00670B70 /* PlayViewController.xib */; };
@@ -113,8 +115,10 @@
 		01B5493928F3F89800F021DD /* CongratulationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongratulationViewController.xib; sourceTree = "<group>"; };
 		01B5493A28F3F89800F021DD /* CongratulationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationViewController.swift; sourceTree = "<group>"; };
 		01B5493D28F50D7C00F021DD /* PlayViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewExtension.swift; sourceTree = "<group>"; };
-		01DBF5E728EFCC9300670B70 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../GameProject 09.45.20/GameProject/HomeView/HomeViewController.swift"; sourceTree = "<group>"; };
-		01DBF5E828EFCC9300670B70 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = "../../../GameProject 09.45.20/GameProject/HomeView/HomeViewController.xib"; sourceTree = "<group>"; };
+		01B5494128F6712F00F021DD /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		01B5494228F6712F00F021DD /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		01DBF5E728EFCC9300670B70 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		01DBF5E828EFCC9300670B70 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		01DBF5EE28EFE9FB00670B70 /* PlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
 		01DBF5F128EFE9FB00670B70 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		01DBF5FC28EFF23400670B70 /* AskAudienceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskAudienceViewController.xib; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				01AC4CAF28F07BA900B65B8D /* RulesTableViewCell2.xib */,
 				01AC4CB228F07E8E00B65B8D /* RulesTableViewCell3.swift */,
 				01AC4CB328F07E8E00B65B8D /* RulesTableViewCell3.xib */,
+				01B5494128F6712F00F021DD /* DescriptionTableViewCell.swift */,
+				01B5494228F6712F00F021DD /* DescriptionTableViewCell.xib */,
 			);
 			path = RulesView;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				0192633528ED9C8D00271121 /* JsonSupport.json in Resources */,
 				01721A3828EDC441005DD2FF /* CustomAlertViewController.xib in Resources */,
 				0192630F28ED245F00271121 /* fail.wav in Resources */,
+				01B5494428F6712F00F021DD /* DescriptionTableViewCell.xib in Resources */,
 				01AC4CB528F07E8E00B65B8D /* RulesTableViewCell3.xib in Resources */,
 				0192631028ED245F00271121 /* media5.mp3 in Resources */,
 				0192630C28ED245F00271121 /* media9.wav in Resources */,
@@ -444,6 +451,7 @@
 				01DBF60228EFF23400670B70 /* TimeOutViewController.swift in Sources */,
 				0192632A28ED9C6100271121 /* ScoreTableViewCell.swift in Sources */,
 				0192633728ED9C8D00271121 /* RulesViewController.swift in Sources */,
+				01B5494328F6712F00F021DD /* DescriptionTableViewCell.swift in Sources */,
 				01AC4CB028F07BA900B65B8D /* RulesTableViewCell2.swift in Sources */,
 				01AA929928E5319500589202 /* GameProject.xcdatamodeld in Sources */,
 				01DBF5F728EFE9FB00670B70 /* PlayViewController.swift in Sources */,

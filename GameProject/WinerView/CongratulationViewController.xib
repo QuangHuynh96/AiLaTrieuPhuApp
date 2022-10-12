@@ -85,9 +85,9 @@
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="" cornerStyle="capsule">
-                                        <backgroundConfiguration key="background" image="310699593_465322768897769_3283981907247223020_n (1)" imageContentMode="scaleAspectFit" strokeWidth="2">
+                                        <backgroundConfiguration key="background" image="310699593_465322768897769_3283981907247223020_n (1)" imageContentMode="scaleAspectFit" strokeWidth="2" strokeOutset="2">
                                             <color key="backgroundColor" red="0.1157760695" green="0.47250521179999999" blue="0.95009785889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="strokeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </backgroundConfiguration>
                                     </buttonConfiguration>
                                     <connections>
@@ -103,9 +103,9 @@
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="house" catalog="system" title="" cornerStyle="capsule">
-                                        <backgroundConfiguration key="background" strokeWidth="2">
+                                        <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="2">
                                             <color key="backgroundColor" red="0.40956521029999998" green="0.63353413339999998" blue="0.11221804470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="strokeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </backgroundConfiguration>
                                     </buttonConfiguration>
                                     <connections>

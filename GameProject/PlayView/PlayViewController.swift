@@ -54,9 +54,9 @@ class PlayViewController: UIViewController {
     var cAnswerValue = ""
     var dAnswerValue = ""
     let rewards: [Int] = [
-        200, 400, 600, 1000, 2000,
-        3000, 6000, 10000, 14000, 22000,
-        30000, 40000, 60000, 85000, 150000
+        200000, 400000, 600000, 1000000, 2000000,
+        3000000, 6000000, 10000000, 14000000, 22000000,
+        30000000, 40000000, 60000000, 85000000, 150000000
     ]
 
     override func viewDidLoad() {
@@ -71,6 +71,7 @@ class PlayViewController: UIViewController {
         imageSpView1?.isHidden = true
         imageSpView2?.isHidden = true
         imageSpView3?.isHidden = true
+        contentQuestionView?.isEditable = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -123,6 +124,7 @@ class PlayViewController: UIViewController {
                 self.showCorrectAnswer()
                 self.setTimer()
              }
+            changeEnableSupport()
         }
     }
 
@@ -136,6 +138,7 @@ class PlayViewController: UIViewController {
                 self.showCorrectAnswer()
                 self.setTimer()
              }
+            changeEnableSupport()
         }
     }
 
@@ -149,6 +152,7 @@ class PlayViewController: UIViewController {
                 self.showCorrectAnswer()
                 self.setTimer()
              }
+            changeEnableSupport()
 
         }
     }
@@ -163,6 +167,7 @@ class PlayViewController: UIViewController {
                 self.showCorrectAnswer()
                 self.setTimer()
              }
+            changeEnableSupport()
         }
     }
 
@@ -218,21 +223,32 @@ extension PlayViewController {
         }
     }
 
+    private func changeEnableSupport() {
+        if checkSelected {
+            callSpbutton?.isEnabled = false
+            ataSpButton?.isEnabled = false
+            fiveSpButton?.isEnabled = false
+        } else {
+            callSpbutton?.isEnabled = true
+            ataSpButton?.isEnabled = true
+            fiveSpButton?.isEnabled = true
+        }
+    }
+
     private func resetSelectAnswer(view: UIView) {
         checkSelected = false
         finalAnswer = ""
         resetTimCount(second: 31)
+        changeEnableSupport()
         view.backgroundColor = UIColor(cgColor: self.colorAnswerBtn ?? CGColor(gray: 0, alpha: 0))
-
-//        let numberFormatter = NumberFormatter()
-//        numberFormatter.numberStyle = .decimal
-//        pointView?.titleLabel?.text = numberFormatter.string(from: NSNumber(value: scores))
     }
 
     func passDataToView() {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        pointView?.titleLabel?.text = numberFormatter.string(from: NSNumber(value: scores))
+        if let point = numberFormatter.string(from: NSNumber(value: scores)) {
+            animationChangeScores(score: point)
+        }
         titleQuestionView?.text = "Câu \(answerCount)"
         DataManager.shared.getDataRamdom { [weak self] allAnswer in
             guard let self = self else {
@@ -416,6 +432,22 @@ extension PlayViewController {
 
 // MARK: support function
 extension PlayViewController {
+    private func animationChangeScores(score: String) {
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0,
+            options: .curveLinear,
+            animations: {
+                self.pointView?.transform = CGAffineTransform(translationX: 150, y: 0)
+                self.pointView?.alpha = 0
+            }, completion: { [weak self] _ in
+                self?.pointView?.setTitle(score, for: .normal)
+                UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
+                    self?.pointView?.transform = CGAffineTransform(translationX: 0, y: 0)
+                    self?.pointView?.alpha = 1
+                })
+            })
+    }
 
     private func supportFunction50_50() {
         self.stopTimer()

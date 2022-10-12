@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -91,6 +92,9 @@
                             </fragment>
                         </attributedString>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="onTapHighScoreBtn:" destination="-1" eventType="touchUpInside" id="1Lb-Fk-SZz"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwL-FT-zVi">
                     <rect key="frame" x="22" y="614.5" width="370" height="45"/>
@@ -112,6 +116,9 @@
                             </fragment>
                         </attributedString>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="onTapRulesBtn:" destination="-1" eventType="touchUpInside" id="Pc3-lu-xBr"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwS-EG-8iO" userLabel="UnMuteButton">
                     <rect key="frame" x="352" y="800" width="40" height="40"/>
@@ -120,7 +127,7 @@
                         <constraint firstAttribute="height" constant="40" id="pnR-nO-VMy"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" image="volume.3.fill" catalog="system" cornerStyle="large">
+                    <buttonConfiguration key="configuration" style="filled" image="volume.2" catalog="system" cornerStyle="large">
                         <backgroundConfiguration key="background">
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,16 +180,11 @@
             </constraints>
             <point key="canvasLocation" x="132" y="130"/>
         </view>
-        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="4Tm-y3-uEV">
-            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="-136.23188405797103" y="482.8125"/>
-        </activityIndicatorView>
     </objects>
     <resources>
         <image name="Site-logo" width="500" height="471"/>
         <image name="bg" width="1920" height="1080"/>
-        <image name="volume.3.fill" catalog="system" width="128" height="86"/>
+        <image name="volume.2" catalog="system" width="128" height="90"/>
         <image name="volume.slash.fill" catalog="system" width="124" height="128"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

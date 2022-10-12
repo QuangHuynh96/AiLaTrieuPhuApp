@@ -4,7 +4,7 @@
 //
 //  Created by HuynhLQ on 29/09/2022.
 //
-
+import AVFoundation
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -15,7 +15,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var unMuteBtn: UIButton?
     @IBOutlet weak var muteBtn: UIButton?
     @IBOutlet weak var playBtn: UIButton?
-    private var mute = false
+    var isMute = false
+    var player: AVAudioPlayer?
+
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return [UIInterfaceOrientationMask.portrait]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +31,11 @@ class HomeViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.mainView?.alpha = 1
+        navigationController?.setNavigationBarHidden(true, animated: animated)
         changeSoundApp()
+        player?.stop()
+        homeSoundBackground(resource: "home", type: "mp3")
+        self.mainView?.alpha = 1
         actionShowView()
     }
 
@@ -35,36 +46,107 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func onTapPlay(_ sender: Any) {
-        let playVC = PlayViewController()
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
-            self.iconImage?.transform = CGAffineTransform(scaleX: 5, y: 5)
-            self.unDisplay()
-        }, completion: { _ in
-            self.navigationController?.pushViewController(playVC, animated: false)
-            self.iconImage?.transform = CGAffineTransform(scaleX: 1, y: 1)
-        })
+        let alertCustom = CustomAlertViewController()
+        alertCustom.setupAlert(
+            title: "Bạn đã sẵn sàn",
+            mess: "Hãy giữ kết nối online ổn định. Chúng ta bắt đầu đi tìm. Ai là triệu phú!!",
+            leftTitle: "Quay lại",
+            rightTitle: "Chơi")
+        alertCustom.actionClosureLeft = {[weak self] in
+            self?.dismiss(animated: true)
+        }
+        alertCustom.actionClosureRight = {[weak self] in
+            self?.dismiss(animated: true)
+            guard let mute = self?.isMute else {
+                return
+            }
+            let playVC = PlayViewController()
+            playVC.isMute = mute
+            UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
+                self?.iconImage?.transform = CGAffineTransform(scaleX: 5, y: 5)
+                self?.unDisplay()
+            }, completion: { _ in
+                self?.navigationController?.pushViewController(playVC, animated: false)
+                self?.iconImage?.transform = CGAffineTransform(scaleX: 1, y: 1)
+                self?.player?.stop()
+            })
+        }
+        alertCustom.modalPresentationStyle = .overCurrentContext
+        alertCustom.modalTransitionStyle = .crossDissolve
+        alertCustom.providesPresentationContextTransitionStyle = true
+        alertCustom.definesPresentationContext = true
+        self.present(alertCustom, animated: true)
     }
 
     @IBAction func onTapUnMuteBtn(_ sender: Any) {
+        isMute = !isMute
         changeSoundApp()
     }
 
     @IBAction func onTapMuteBtn(_ sender: Any) {
+        isMute = !isMute
         changeSoundApp()
+    }
+
+    @IBAction func onTapHighScoreBtn(_ sender: Any) {
+        player?.stop()
+        homeSoundBackground(resource: "childView", type: "mp3")
+        if !isMute {
+            player?.play()
+        }
+        let scoreView = ScoreViewController()
+        navigationController?.pushViewController(scoreView, animated: true)
+    }
+
+    @IBAction func onTapRulesBtn(_ sender: Any) {
+        player?.stop()
+        homeSoundBackground(resource: "childView", type: "mp3")
+        if !isMute {
+            player?.play()
+        }
+        let ruleView = RulesViewController()
+        navigationController?.pushViewController(ruleView, animated: true)
     }
 }
 
 extension HomeViewController {
 
     func changeSoundApp() {
-        mute = !mute
-        if mute {
-            unMuteBtn?.isHidden = true
-            muteBtn?.isHidden = false
+        if isMute {
+            muteButtonIsHiden()
+            player?.volume = 0
         } else {
-                unMuteBtn?.isHidden = false
-                muteBtn?.isHidden = true
+            muteButtonUnHiden()
+            player?.volume = 0.8
         }
+    }
+
+    func muteButtonIsHiden() {
+        UIView.animate(
+            withDuration: 0.25,
+            delay: 0,
+            options: .curveEaseInOut,
+            animations: {
+                self.unMuteBtn?.alpha = 1
+                self.muteBtn?.alpha = 0
+        }, completion: { [weak self] _ in
+            self?.unMuteBtn?.isHidden = false
+            self?.muteBtn?.isHidden = true
+        })
+    }
+
+    func muteButtonUnHiden() {
+        UIView.animate(
+            withDuration: 0.25,
+            delay: 0,
+            options: .curveEaseInOut,
+            animations: {
+                self.muteBtn?.alpha = 1
+                self.unMuteBtn?.alpha = 0
+        }, completion: { [weak self] _ in
+            self?.muteBtn?.isHidden = false
+            self?.unMuteBtn?.isHidden = true
+        })
     }
 
     private func unDisplay() {
@@ -79,13 +161,14 @@ extension HomeViewController {
 
     private func actionShowView() {
         self.mainView?.alpha = 1
-        UIView.animate(withDuration: 0.7, delay: 0.2, options: .curveLinear, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveLinear, animations: {
             self.iconImage?.transform = CGAffineTransform(scaleX: 1.8, y: 1.8)
             self.iconImage?.alpha = 1
         }, completion: {_ in
-            UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
                 self.iconImage?.transform = CGAffineTransform(scaleX: 1, y: 1)
                 self.disPlayLine()
+                self.player?.play()
             }, completion: nil)
         })
     }
@@ -99,4 +182,27 @@ extension HomeViewController {
         self.guideBtn?.transform = CGAffineTransform(translationX: 0, y: 0)
     }
 
+}
+
+extension HomeViewController {
+
+    func homeSoundBackground(resource: String, type: String) {
+        if let player = player,
+           player.isPlaying {
+            player.pause()
+        } else {
+            let urlString = Bundle.main.path(forResource: resource, ofType: type)
+            do {
+                try AVAudioSession.sharedInstance().setMode(.default)
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+
+                guard let urlString = urlString else {
+                    return
+                }
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
+            } catch {
+                print("error")
+            }
+        }
+    }
 }

@@ -30,7 +30,7 @@
                 <outlet property="pointView" destination="Z1Z-6o-9ow" id="9aO-rc-ahW"/>
                 <outlet property="questionView" destination="IdP-1Y-gva" id="EkX-yC-TH3"/>
                 <outlet property="spView" destination="gWP-tf-a7J" id="qXi-6F-4he"/>
-                <outlet property="titleQuestionView" destination="8cw-vf-vGk" id="3mr-F8-FOb"/>
+                <outlet property="titleQuestionView" destination="C1f-je-IbA" id="4ut-oK-jqV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -72,12 +72,22 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="YoE-yg-vEF"/>
                     </constraints>
+                    <color key="tintColor" systemColor="systemTealColor"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="0000" cornerStyle="large">
-                        <backgroundConfiguration key="background">
-                            <color key="backgroundColor" red="0.24981929850000001" green="0.48011569479999999" blue="0.84721327319999995" alpha="0.80867346939999996" colorSpace="custom" customColorSpace="displayP3"/>
+                    <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                        <backgroundConfiguration key="background" strokeWidth="2">
+                            <color key="backgroundColor" red="0.28570227221164357" green="0.5500351841744533" blue="0.97138772551958752" alpha="0.80867346939999996" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </backgroundConfiguration>
+                        <attributedString key="attributedTitle">
+                            <fragment content="0">
+                                <attributes>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" size="14" name="Didot-Bold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                     </buttonConfiguration>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdP-1Y-gva" userLabel="questionView">
@@ -93,7 +103,7 @@
                                             <rect key="frame" x="22" y="22" width="322" height="108"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
@@ -139,25 +149,47 @@
                             </buttonConfiguration>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-gd-eOD" userLabel="titleQuestionView">
-                            <rect key="frame" x="50" y="0.0" width="80" height="40"/>
+                            <rect key="frame" x="50" y="0.0" width="90" height="40"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Câu 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cw-vf-vGk" userLabel="titleQuestionTextField">
-                                    <rect key="frame" x="2" y="2" width="76" height="36"/>
-                                    <color key="backgroundColor" red="0.075921474320000001" green="0.3214290688" blue="0.55995957169999999" alpha="0.84845344389999999" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <color key="textColor" systemColor="systemGray6Color"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-eW-4gu">
+                                    <rect key="frame" x="2" y="2" width="86" height="36"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Câu 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1f-je-IbA">
+                                            <rect key="frame" x="5" y="5" width="76" height="26"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.1686274707" green="0.3058823645" blue="0.58431375029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstItem="C1f-je-IbA" firstAttribute="leading" secondItem="ndM-eW-4gu" secondAttribute="leading" constant="5" id="Bxs-qn-kQg"/>
+                                        <constraint firstItem="C1f-je-IbA" firstAttribute="top" secondItem="ndM-eW-4gu" secondAttribute="top" constant="5" id="DRn-46-GHO"/>
+                                        <constraint firstAttribute="bottom" secondItem="C1f-je-IbA" secondAttribute="bottom" constant="5" id="UDt-Yz-hJL"/>
+                                        <constraint firstAttribute="trailing" secondItem="C1f-je-IbA" secondAttribute="trailing" constant="5" id="pTW-zi-8Ak"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="8cw-vf-vGk" secondAttribute="bottom" constant="2" id="8gJ-TO-yaI"/>
-                                <constraint firstItem="8cw-vf-vGk" firstAttribute="leading" secondItem="EPg-gd-eOD" secondAttribute="leading" constant="2" id="LwY-Yq-Uf8"/>
-                                <constraint firstAttribute="width" constant="80" id="cLI-8e-zlu"/>
-                                <constraint firstItem="8cw-vf-vGk" firstAttribute="top" secondItem="EPg-gd-eOD" secondAttribute="top" constant="2" id="pTj-S3-bZQ"/>
+                                <constraint firstAttribute="bottom" secondItem="ndM-eW-4gu" secondAttribute="bottom" constant="2" id="1m6-jA-2Ym"/>
+                                <constraint firstAttribute="trailing" secondItem="ndM-eW-4gu" secondAttribute="trailing" constant="2" id="Sug-pN-x97"/>
+                                <constraint firstItem="ndM-eW-4gu" firstAttribute="top" secondItem="EPg-gd-eOD" secondAttribute="top" constant="2" id="WRa-kU-gBo"/>
+                                <constraint firstAttribute="width" constant="90" id="cLI-8e-zlu"/>
+                                <constraint firstItem="ndM-eW-4gu" firstAttribute="leading" secondItem="EPg-gd-eOD" secondAttribute="leading" constant="2" id="rB1-cx-9QN"/>
                                 <constraint firstAttribute="height" constant="40" id="wJF-KR-n6J"/>
-                                <constraint firstAttribute="trailing" secondItem="8cw-vf-vGk" secondAttribute="trailing" constant="2" id="yqE-JD-ZrR"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -493,8 +525,8 @@
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

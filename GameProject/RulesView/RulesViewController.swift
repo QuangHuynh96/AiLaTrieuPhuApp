@@ -9,14 +9,16 @@ import UIKit
 
 class RulesViewController: UIViewController {
     @IBOutlet var rulesTable: UITableView?
-    @IBOutlet weak var textViewField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCell()
-        textViewField.isScrollEnabled = false
     }
 
     private func setupCell() {
+        rulesTable?.register(
+            UINib(nibName: "DescriptionTableViewCell", bundle: .main),
+            forCellReuseIdentifier: "DescriptionTableViewCell"
+        )
         rulesTable?.register(
             UINib(nibName: "RulesTableViewCell", bundle: .main),
             forCellReuseIdentifier: "RulesTableViewCell"
@@ -40,12 +42,20 @@ class RulesViewController: UIViewController {
 
 extension RulesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        4
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
+            guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "DescriptionTableViewCell",
+            for: indexPath) as? DescriptionTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.selectionStyle = .none
+        return cell
+        case 1:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "RulesTableViewCell",
                 for: indexPath) as? RulesTableViewCell else {
@@ -53,7 +63,7 @@ extension RulesViewController: UITableViewDelegate, UITableViewDataSource {
             }
             cell.selectionStyle = .none
             return cell
-        case 1:
+        case 2:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "RulesTableViewCell2",
                 for: indexPath) as? RulesTableViewCell2 else {
@@ -73,6 +83,10 @@ extension RulesViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
+        if indexPath.row == 0 {
+            return 180
+        } else {
+            return 60
+        }
     }
 }
